@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · Gpt-Android{% endblock %}
+{% block content %}
+<main class="dashboard">
+    <header class="topbar">
+        <div><h1>Gpt-Android</h1><p class="muted">Android Device Test Harness</p></div>
+        <span id="public-url" class="pill">URL pública: —</span>
+    </header>
+
+    <section class="stats-grid">
+        <article class="card"><span class="muted">Total</span><strong id="total">0</strong></article>
+        <article class="card"><span class="muted">Online</span><strong id="online">0</strong></article>
+        <article class="card"><span class="muted">Offline</span><strong id="offline">0</strong></article>
+    </section>
+
+    <section class="card">
+        <div class="section-header"><div><h2>Emparelhamento</h2><p class="muted">Gere um token para um cliente autorizado.</p></div><button id="generate-token">Gerar token</button></div>
+        <code id="pairing-token" class="token">—</code>
+    </section>
+
+    <section class="card">
+        <div class="section-header"><div><h2>Dispositivos</h2><p class="muted">Telemetria autorizada e estado da ligação.</p></div></div>
+        <div id="device-list" class="device-list"><p class="muted">Nenhum dispositivo ligado.</p></div>
+    </section>
+
+    <section class="card notice">
+        <h2>Âmbito dos testes</h2>
+        <p class="muted">Este painel não implementa espionagem, interceção de mensagens ou notificações, controlo furtivo, extração de dados ou bloqueio/desbloqueio remoto.</p>
+    </section>
+</main>
+{% endblock %}
