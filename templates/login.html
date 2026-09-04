@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Login · Gpt-Android{% endblock %}
+{% block content %}
+<main class="auth-page">
+    <section class="card auth-card">
+        <div class="brand">Gpt-Android</div>
+        <p class="muted">Android Device Test Harness</p>
+        <form id="login-form">
+            <label for="username">Utilizador</label>
+            <input id="username" name="username" autocomplete="username" required>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+            <button type="submit">Entrar</button>
+            <p id="login-error" class="error" hidden>Credenciais inválidas.</p>
+        </form>
+    </section>
+</main>
+{% endblock %}
